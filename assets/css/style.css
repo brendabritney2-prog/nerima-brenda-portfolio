@@ -200,6 +200,36 @@ body.menu-open .menu-toggle span::after{transform:translateY(-5px) rotate(-45deg
 .practice-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);background:var(--paper-2)}
 .practice-grid figcaption{margin-top:12px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
 
+/* ---------- Field work ---------- */
+.field{background:var(--paper-2);border-block:1px solid var(--line)}
+.field-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(18px,3vw,36px)}
+.field-grid figure{grid-column:span 6;margin:0}
+.field-grid figure img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:var(--radius);background:var(--cream)}
+.field-grid figcaption{margin-top:11px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.field-grid .field-card{
+  grid-column:1/-1;display:grid;grid-template-columns:minmax(240px,420px) 1fr;
+  gap:clamp(20px,3vw,40px);align-items:center;padding:18px;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--radius)
+}
+.field-grid .field-card img{aspect-ratio:auto;border-radius:2px}
+.field-grid .field-card h3{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.6vw,30px);line-height:1.15;margin:10px 0}
+.field-grid .field-card p{font-size:13px;color:var(--ink-soft);max-width:56ch;margin:0 0 6px}
+.field-grid .field-card .field-lines{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--oak-deep);font-weight:700}
+
+/* ---------- Mood charts ---------- */
+.mood{background:var(--paper)}
+.mood-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.5vw,32px)}
+.mood-card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.mood-card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:var(--cream)}
+.mood-info{padding:20px}
+.mood-no{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--oak-deep);font-weight:700}
+.mood-info h3{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.15;margin:8px 0 6px}
+.mood-info p{font-size:13px;color:var(--ink-soft);margin:0 0 14px}
+.swatches{display:flex;gap:7px;margin-bottom:14px}
+.swatches span{width:34px;height:34px;border-radius:50%;background:var(--swatch);border:1px solid rgba(0,0,0,.08)}
+.mood-tags{display:flex;flex-wrap:wrap;gap:6px}
+.mood-tags span{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 9px;color:var(--ink-soft)}
+
 /* ---------- Process ---------- */
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,34px)}
 .step{border-top:1px solid var(--ink);padding-top:18px}
@@ -298,6 +328,8 @@ body.menu-open .menu-toggle span::after{transform:translateY(-5px) rotate(-45deg
   .about-grid{grid-template-columns:1fr;gap:40px}
   .about-figure{max-width:480px}
   .practice-grid{grid-template-columns:1fr;gap:28px}
+  .field-grid .field-card{grid-template-columns:1fr}
+  .mood-grid{grid-template-columns:1fr 1fr}
   .process-grid{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr}
   .project-meta{grid-template-columns:1fr 1fr}
@@ -319,6 +351,8 @@ body.menu-open .menu-toggle span::after{transform:translateY(-5px) rotate(-45deg
   .section-head{flex-direction:column;align-items:flex-start;gap:18px}
   .hero-meta{gap:22px}
   .services{grid-template-columns:1fr}
+  .field-grid figure{grid-column:1/-1}
+  .mood-grid{grid-template-columns:1fr}
   .process-grid{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr}
   .gallery .wide{grid-column:auto}

@@ -6,8 +6,11 @@ from html import escape
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://brendabritney2-prog.github.io/nerima-brenda-portfolio"
 SITE = "Nerima Brenda"
-EMAIL = "brendanerima131@gmail.com"
+BUSINESS = "Neri Creations & Interiors"
+EMAIL = "brenda.britney2@gmail.com"
 PHONE = "0758596679"
+PHONE_2 = "0774156662"
+LOCATION = "Kasangati, Nangabo Road, Kampala"
 
 PROJECTS = [
     {
@@ -169,8 +172,9 @@ def head(title, desc, image, rel="", canonical=""):
 def header(rel="", current=""):
     links = [
         ("#work", "Work", "work"),
+        ("#field", "Field work", "field"),
+        ("#mood", "Mood charts", "mood"),
         ("#studio", "About", "studio"),
-        ("#practice", "Practice", "practice"),
         ("#process", "Process", "process"),
         ("#contact", "Contact", "contact"),
     ]
@@ -198,7 +202,7 @@ def header(rel="", current=""):
 def footer(rel=""):
     return f"""<footer class="site-footer">
   <div class="wrap footer-inner">
-    <span>© <span data-year>2026</span> {SITE} · Interior and landscape design</span>
+    <span>© <span data-year>2026</span> {SITE} · {BUSINESS} · Interior and landscape design</span>
     <a class="to-top" href="#top">Back to top {ICON_UP}</a>
   </div>
 </footer>
@@ -246,7 +250,7 @@ def index():
     ticker = "".join(f"<span>{t}</span>" for t in ticker_items)
     html = head(
         f"{SITE}, Interior and landscape design",
-        "Nerima Brenda is an interior and landscape designer in Kampala working on residential interiors, custom furniture, floor plans, 3D design and landscaping.",
+        "Nerima Brenda of Neri Creations & Interiors is a Kampala interior and landscape designer working on residential interiors, custom furniture, floor plans, 3D design and landscaping.",
         "oak-and-light-og.webp",
     )
     html += header()
@@ -256,7 +260,7 @@ def index():
     <div>
         <span class="eyebrow reveal">Interior and landscape design · Kampala</span>
         <h1 class="reveal" data-delay="1">Spaces shaped around <em>the way you live.</em></h1>
-        <p class="lede reveal" data-delay="2">I am {SITE}, an interior designer and landscape design graduate. I turn briefs into buildable drawings, custom furniture and rooms that feel considered from the first sketch to the final finish.</p>
+        <p class="lede reveal" data-delay="2">I am {SITE}, an interior and landscape designer behind {BUSINESS} in Kasangati. I turn briefs into buildable drawings, custom furniture and rooms that feel considered from first sketch to final finish.</p>
       <div class="hero-actions reveal" data-delay="3">
         <a class="btn btn-dark" href="#work">View selected work {ICON_DOWN}</a>
         <a class="btn btn-ghost" href="#contact">Start a project {ICON_ARROW}</a>
@@ -287,13 +291,124 @@ def index():
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="eyebrow reveal">Selected work</span>
-        <h2 class="reveal" data-delay="1">A quiet collection of rooms</h2>
+        <span class="eyebrow reveal">Room studies</span>
+        <h2 class="reveal" data-delay="1">Measured rooms, shown in 3D</h2>
       </div>
-      <p class="reveal" data-delay="2">Five rooms, modelled and measured in Blender, then published as orbitable 3D models. Open any room to move around it.</p>
+      <p class="reveal" data-delay="2">Five room studies modelled at full scale in Blender, then published as orbitable 3D models. Open any room to move around it.</p>
     </div>
     <div class="work-grid">
       {cards}
+    </div>
+  </div>
+</section>
+
+<section class="section field" id="field">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">In the field</span>
+        <h2 class="reveal" data-delay="1">Seen on site, not just on paper</h2>
+      </div>
+      <p class="reveal" data-delay="2">Client conversations, site checks and finishing details from the {BUSINESS} practice. Large images, small notes.</p>
+    </div>
+    <div class="field-grid">
+      <figure class="reveal">
+        <img src="assets/img/field-01-1200.webp"
+             srcset="assets/img/field-01-800.webp 800w, assets/img/field-01-1200.webp 1200w"
+             sizes="(max-width:760px) 100vw, 48vw" width="1200" height="1600"
+             alt="Clients and designers gathered for a project discussion" loading="lazy" decoding="async">
+        <figcaption>Client conversations, on site</figcaption>
+      </figure>
+      <figure class="reveal" data-delay="1">
+        <img src="assets/img/field-02-1200.webp"
+             srcset="assets/img/field-02-800.webp 800w, assets/img/field-02-1200.webp 1200w"
+             sizes="(max-width:760px) 100vw, 48vw" width="1200" height="1600"
+             alt="Designer checking finishes and proportions during a site visit" loading="lazy" decoding="async">
+        <figcaption>Measuring, checking, adjusting</figcaption>
+      </figure>
+      <figure class="reveal" data-delay="2">
+        <img src="assets/img/field-03-1200.webp"
+             srcset="assets/img/field-03-800.webp 800w, assets/img/field-03-1200.webp 1200w"
+             sizes="(max-width:760px) 100vw, 48vw" width="1200" height="1600"
+             alt="Neri Creations & Interiors signage seen during field work" loading="lazy" decoding="async">
+        <figcaption>The practice, visible in the field</figcaption>
+      </figure>
+      <figure class="reveal" data-delay="3">
+        <img src="assets/img/field-04-892.webp"
+             srcset="assets/img/field-04-540.webp 540w, assets/img/field-04-892.webp 892w"
+             sizes="(max-width:760px) 100vw, 48vw" width="892" height="1599"
+             alt="Close view of furniture and finish work in progress" loading="lazy" decoding="async">
+        <figcaption>Finishes handled up close</figcaption>
+      </figure>
+      <figure class="field-card reveal" data-delay="3">
+        <img src="assets/img/business-card-966.webp" width="966" height="627"
+             alt="Neri Creations & Interiors business card listing services, phone numbers and Kasangati location" loading="lazy" decoding="async">
+        <div>
+          <span class="eyebrow">{BUSINESS}</span>
+          <h3>Interiors, furniture and compounds</h3>
+          <p>Home renovations, decor, lighting and painting, furniture design, 3D visuals, curtains and cushions, house planning and landscaping.</p>
+          <p class="field-lines">{PHONE} / {PHONE_2} · {LOCATION}</p>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="section mood" id="mood">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">Mood charts</span>
+        <h2 class="reveal" data-delay="1">Past client briefs, shown in colour</h2>
+      </div>
+      <p class="reveal" data-delay="2">Anonymised charts from past client work. Each one pairs the image, palette and services, so the thinking is visible before a word is read.</p>
+    </div>
+    <div class="mood-grid">
+      <article class="mood-card reveal">
+        <img src="assets/img/brenda-02-960.webp"
+             srcset="assets/img/brenda-02-640.webp 640w, assets/img/brenda-02-960.webp 960w"
+             sizes="(max-width:760px) 100vw, 32vw" width="960" height="1280"
+             alt="Furniture and interior detailing from a past client project" loading="lazy" decoding="async">
+        <div class="mood-info">
+          <span class="mood-no">Chart 01</span>
+          <h3>TV wall and living room</h3>
+          <p>A media wall, painting, curtains and cushions, held together by warm neutrals and one cool accent.</p>
+          <div class="swatches" aria-label="Warm neutral palette">
+            <span style="--swatch:#D5CDBB"></span><span style="--swatch:#C0B092"></span><span style="--swatch:#545A69"></span><span style="--swatch:#8E897E"></span>
+          </div>
+          <div class="mood-tags"><span>TV wall unit</span><span>Decor</span><span>3D visual</span></div>
+        </div>
+      </article>
+      <article class="mood-card reveal" data-delay="1">
+        <img src="assets/img/field-04-892.webp"
+             srcset="assets/img/field-04-540.webp 540w, assets/img/field-04-892.webp 892w"
+             sizes="(max-width:760px) 100vw, 32vw" width="892" height="1599"
+             alt="Cabinet and finish work from a past client project" loading="lazy" decoding="async">
+        <div class="mood-info">
+          <span class="mood-no">Chart 02</span>
+          <h3>Kitchen and custom joinery</h3>
+          <p>Cabinet fronts, worktop tone and lighting studied as one scheme before anything was fixed.</p>
+          <div class="swatches" aria-label="Earthy kitchen palette">
+            <span style="--swatch:#D5C9AB"></span><span style="--swatch:#857C6E"></span><span style="--swatch:#5A5650"></span><span style="--swatch:#25201D"></span>
+          </div>
+          <div class="mood-tags"><span>Kitchen cabinets</span><span>Furniture design</span><span>Lighting</span></div>
+        </div>
+      </article>
+      <article class="mood-card reveal" data-delay="2">
+        <img src="assets/img/field-03-1200.webp"
+             srcset="assets/img/field-03-800.webp 800w, assets/img/field-03-1200.webp 1200w"
+             sizes="(max-width:760px) 100vw, 32vw" width="1200" height="1600"
+             alt="Landscaping and compound work from a past client project" loading="lazy" decoding="async">
+        <div class="mood-info">
+          <span class="mood-no">Chart 03</span>
+          <h3>Compound and landscaping</h3>
+          <p>Leveling, pergola and gazebo positions, planting beds and a palette taken from the site itself.</p>
+          <div class="swatches" aria-label="Earth and planting palette">
+            <span style="--swatch:#CBAD7B"></span><span style="--swatch:#706250"></span><span style="--swatch:#463C30"></span><span style="--swatch:#18120D"></span>
+          </div>
+          <div class="mood-tags"><span>Compound</span><span>Pergola</span><span>Plant selection</span></div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -310,8 +425,8 @@ def index():
     <div class="about-copy">
       <span class="eyebrow reveal">About Nerima</span>
       <h2 class="reveal" data-delay="1">Design that starts at the drawing board.</h2>
-      <p class="reveal" data-delay="2">I graduated from Kyambogo University with a Bachelor of Interior and Landscape Design, then completed two internships at Meek Construction Company Limited. There I worked directly with clients on furniture and interiors, from TV wall units and kitchen cabinets to floor plans, site plans and 3D designs.</p>
-      <p class="reveal" data-delay="2">I like customising. That means starting with a blank sheet, developing a concept from scratch and making pieces that are not already on the market. I keep an eye on current trends, but the final decision always belongs to the person who will live with the space.</p>
+      <p class="reveal" data-delay="2">I graduated from Kyambogo University with a Bachelor of Interior and Landscape Design, then completed two internships at Meek Construction Company Limited. There I worked directly with clients on TV wall units, kitchen cabinets, living rooms and bedrooms, preparing floor plans, site plans and 3D designs for review.</p>
+      <p class="reveal" data-delay="2">I now work through {BUSINESS} from {LOCATION}. The practice covers home renovations, decor, lighting and painting, furniture design, 3D visuals, curtains and cushions, house planning and landscaping. I develop custom pieces from a blank sheet, check proportions on site and choose finishes and plants that suit the client and the place.</p>
       <blockquote class="big-quote reveal" data-delay="3">“A good design is one you can build, afford and still love a year later.”</blockquote>
       <div class="services reveal" data-delay="3">
         <div><span>Residential interiors</span><span>Whole-home concepts</span></div>
@@ -375,10 +490,11 @@ def index():
       <a class="mail reveal" data-delay="3" href="mailto:{EMAIL}">{EMAIL}</a>
     </div>
     <div class="contact-side reveal" data-delay="3">
-      <div><span class="label">Based in</span>Kampala, Uganda, working across East Africa</div>
-      <div><span class="label">Phone</span><a href="tel:+256758596679">{PHONE}</a></div>
+      <div><span class="label">Practice</span>{BUSINESS}</div>
+      <div><span class="label">Based in</span>{LOCATION}, working across East Africa</div>
+      <div><span class="label">Phone</span><a href="tel:+256758596679">{PHONE}</a> / <a href="tel:+256774156662">{PHONE_2}</a></div>
+      <div><span class="label">Email</span><a href="mailto:{EMAIL}">{EMAIL}</a></div>
       <div><span class="label">CV</span><a href="assets/nerima-brenda-cv.pdf" target="_blank" rel="noopener">Download PDF</a></div>
-      <div><span class="label">Response</span>Within two working days</div>
     </div>
   </div>
 </section>

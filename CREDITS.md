@@ -8,7 +8,7 @@
 
 **Viewer:** [Three.js](https://threejs.org/) r160, MIT License, vendored in `assets/vendor/`.
 
-**Photography:** The photographs used in the About and Practice sections are Nerima Brenda's own images. The room studies are Blender renders.
+**Photography:** The photographs used in the About, Practice, Field work and Mood charts sections are Nerima Brenda's own images. The business details were read from her card with OpenCV and OCR. The room studies are Blender renders.
 
 ## Dimension references
 

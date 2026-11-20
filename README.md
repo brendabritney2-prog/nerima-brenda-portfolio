@@ -1,6 +1,6 @@
 # Nerima Brenda, Interior and Landscape Design Portfolio
 
-A warm-minimal static portfolio for Nerima Brenda, an interior designer and landscape design graduate in Kampala. The site presents five measured 3D room studies alongside her photographs, project writing and CV.
+A warm-minimal static portfolio for Nerima Brenda of Neri Creations & Interiors, an interior designer and landscape design graduate in Kampala. The site presents five measured 3D room studies, field photographs, client mood charts and her CV.
 
 **Live site:** https://brendabritney2-prog.github.io/nerima-brenda-portfolio/
 
@@ -12,7 +12,9 @@ A warm-minimal static portfolio for Nerima Brenda, an interior designer and land
 - `assets/js/main.js`: navigation and reveal animations
 - `assets/js/viewer3d.js`: lazy Three.js orbit viewer with poster fallback
 - `assets/models/*.glb`: exported 3D models, ceiling removed
-- `assets/img/brenda-*.webp`: Nerima's photographs, resized for the site
+- `assets/img/brenda-*.webp`: Nerima's portrait and project photographs
+- `assets/img/field-*.webp`: field and client-work images, prepared with OpenCV
+- `assets/img/business-card-966.webp`: Neri Creations & Interiors card used for business details
 - `assets/img/`: responsive WebP stills (800/1280 px) and 1200×630 OG images
 - `assets/nerima-brenda-cv.pdf`: downloadable CV
 - `assets/vendor/`: vendored Three.js r160 module and addons
@@ -23,7 +25,7 @@ A warm-minimal static portfolio for Nerima Brenda, an interior designer and land
 
 ## Content
 
-The copy is written from Nerima's CV and voice-note interview. It covers her Bachelor of Interior and Landscape Design at Kyambogo University, two internships at Meek Construction Company Limited, and client work on TV wall units, kitchen cabinets, floor plans, site plans, 3D designs, custom furniture and landscaping.
+The copy is written from Nerima's CV, voice-note interview, field images and OCR of her business card. It covers her Bachelor of Interior and Landscape Design at Kyambogo University, two internships at Meek Construction Company Limited, the Neri Creations & Interiors practice, and client work on TV wall units, kitchen cabinets, floor plans, site plans, 3D designs, custom furniture, lighting, decor and landscaping. Past-client mood charts pair the field imagery with palettes extracted from the photographs.
 
 ## Room dimensions
 
@@ -46,7 +48,7 @@ python3 blender/make_web_images.py
 python3 build.py
 ```
 
-Edit `PROJECTS`, `EMAIL`, `PHONE` or `BASE` at the top of `build.py`, then rebuild.
+Edit `PROJECTS`, `EMAIL`, `PHONE`, `PHONE_2`, `BUSINESS`, `LOCATION` or `BASE` at the top of `build.py`, then rebuild.
 
 ## Local preview
 
