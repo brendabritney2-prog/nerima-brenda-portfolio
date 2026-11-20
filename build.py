@@ -4,10 +4,10 @@ import os
 from html import escape
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-BASE = "https://marknwilliam.github.io/interior-portfolio"
-SITE = "Nkugwa Mark William"
-EMAIL = "hello@nkugwamarkwilliam.com"
-X_HANDLE = "MarkNkugwa"
+BASE = "https://brendabritney2-prog.github.io/nerima-brenda-portfolio"
+SITE = "Nerima Brenda"
+EMAIL = "brendanerima131@gmail.com"
+PHONE = "0758596679"
 
 PROJECTS = [
     {
@@ -25,7 +25,7 @@ PROJECTS = [
         "widths": [1280, 800],
         "w": 1280, "h": 720,
         "alt": "3D render of a warm living room with a linen sofa, oak coffee table, armchair and floor lamp",
-        "intro": "A living room modelled around one clear metre of movement — a linen sofa, an oak table and a chair that can be pulled into the light.",
+        "intro": "A living room modelled around one clear metre of movement, a linen sofa, an oak table and a chair that can be pulled into the light.",
         "body": [
             "The room is 5.2 by 4.2 metres. The sofa is 2.1 metres long with a 450 mm seat height; the coffee table sits at 400 mm, 450 mm in front of it, so legs can pass without the room feeling like a corridor.",
             "Every clearance is drawn rather than guessed: a 900 mm route around the seating, artwork centred at 1.5 metres, and a window sized above one-eighth of the floor area. The render tests the proportions before materials are committed.",
@@ -50,7 +50,7 @@ PROJECTS = [
         "alt": "3D render of a calm bedroom with a low bed, slatted oak headboard, nightstands and sliding wardrobe",
         "intro": "A bedroom drawn to rest: a 1.6-metre bed with 600 mm either side, a slatted oak headboard and a wardrobe that disappears into the wall.",
         "body": [
-            "At 4.4 by 4.2 metres the room can hold the bed, two 450 mm nightstands and a full-height wardrobe without crowding the route to the window. The mattress sits at 540 mm — low enough to read as calm, high enough to rise from easily.",
+            "At 4.4 by 4.2 metres the room can hold the bed, two 450 mm nightstands and a full-height wardrobe without crowding the route to the window. The mattress sits at 540 mm, low enough to read as calm, high enough to rise from easily.",
             "The headboard is a screen of oak slats; the wardrobe runs the left wall at 600 mm deep. Everything else is left quiet so the morning light has somewhere to land.",
         ],
         "captions": ["Washed linen and a low oak ledge", "Soft light at the edge of the room"],
@@ -71,7 +71,7 @@ PROJECTS = [
         "widths": [1280, 800],
         "w": 1280, "h": 720,
         "alt": "3D render of a warm oak kitchen with a stone worktop, island, stools and pendant lights",
-        "intro": "A working kitchen modelled around the work triangle — fridge, range and sink within 1.5 to 2.7 metres of one another.",
+        "intro": "A working kitchen modelled around the work triangle, fridge, range and sink within 1.5 to 2.7 metres of one another.",
         "body": [
             "The back run holds 900 mm worktops over 600 mm cabinets, with the fridge, range and sink spaced to keep the work triangle compact. A 2.2-metre island sits behind a 1.1-metre aisle, close enough to pass a plate across.",
             "Pendants hang 750 mm above the island, the height that lights the surface without blocking the view. Oak, cream and blackened steel keep the room warm rather than clinical.",
@@ -96,7 +96,7 @@ PROJECTS = [
         "alt": "3D render of a reading nook with a linen armchair, brass side table and full bookshelf",
         "intro": "A quiet corner modelled at full scale: a 450 mm linen armchair, a brass side table at 545 mm and a wall of books.",
         "body": [
-            "This study asks how little a room needs. A chair, a light, a surface for a cup, and enough books to make the walls feel inhabited. The answer is not much — but each object has to earn its place.",
+            "This study asks how little a room needs. A chair, a light, a surface for a cup, and enough books to make the walls feel inhabited. The answer is not much, but each object has to earn its place.",
             "The seat sits at 450 mm with a 545 mm table beside it, both within reach of the window light. The palette moves between linen, sage and oak, with brass only where the hand might rest.",
         ],
         "captions": ["The corner in warm evening light", "Books, brass and a place to sit"],
@@ -117,7 +117,7 @@ PROJECTS = [
         "widths": [1280, 800],
         "w": 1280, "h": 720,
         "alt": "3D render of a dining room with an oak table, four chairs, low pendant and sideboard",
-        "intro": "A 1.8-metre oak table under a pendant hung 750 mm above the surface — a dining room drawn for slow evenings.",
+        "intro": "A 1.8-metre oak table under a pendant hung 750 mm above the surface, a dining room drawn for slow evenings.",
         "body": [
             "Four chairs sit at 450 mm, leaving a 300 mm thigh clearance under the 750 mm tabletop and 900 mm behind each chair to pull out. The pendant pools light on the table rather than the room.",
             "A sideboard runs the back wall, holding bowls, a vase and the things a dining room gathers. Terracotta and sage keep the oak from feeling too polite.",
@@ -150,7 +150,6 @@ def head(title, desc, image, rel="", canonical=""):
 <meta property="og:image" content="{BASE}/assets/img/{image}">
 <meta property="og:url" content="{BASE}/{canonical}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:creator" content="@{X_HANDLE}">
 <meta name="twitter:title" content="{title}">
 <meta name="twitter:description" content="{escape(desc)}">
 <meta name="twitter:image" content="{BASE}/assets/img/{image}">
@@ -170,7 +169,8 @@ def head(title, desc, image, rel="", canonical=""):
 def header(rel="", current=""):
     links = [
         ("#work", "Work", "work"),
-        ("#studio", "Studio", "studio"),
+        ("#studio", "About", "studio"),
+        ("#practice", "Practice", "practice"),
         ("#process", "Process", "process"),
         ("#contact", "Contact", "contact"),
     ]
@@ -198,7 +198,7 @@ def header(rel="", current=""):
 def footer(rel=""):
     return f"""<footer class="site-footer">
   <div class="wrap footer-inner">
-    <span>© <span data-year>2026</span> {SITE} · Interior design &amp; spatial styling</span>
+    <span>© <span data-year>2026</span> {SITE} · Interior and landscape design</span>
     <a class="to-top" href="#top">Back to top {ICON_UP}</a>
   </div>
 </footer>
@@ -245,8 +245,8 @@ def index():
     ]
     ticker = "".join(f"<span>{t}</span>" for t in ticker_items)
     html = head(
-        f"{SITE} — Interior design & spatial styling",
-        "Warm, quiet interiors shaped by natural materials, honest light and the way people live. Selected work by Nkugwa Mark William, Kampala.",
+        f"{SITE}, Interior and landscape design",
+        "Nerima Brenda is an interior and landscape designer in Kampala working on residential interiors, custom furniture, floor plans, 3D design and landscaping.",
         "oak-and-light-og.webp",
     )
     html += header()
@@ -254,15 +254,15 @@ def index():
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow reveal">Interior design &amp; spatial styling — Kampala</span>
-      <h1 class="reveal" data-delay="1">Spaces that feel like a <em>deep breath.</em></h1>
-      <p class="lede reveal" data-delay="2">Warm, quiet interiors shaped by natural materials, honest light and the way people actually live. Selected work and visual studies by {SITE}.</p>
+        <span class="eyebrow reveal">Interior and landscape design · Kampala</span>
+        <h1 class="reveal" data-delay="1">Spaces shaped around <em>the way you live.</em></h1>
+        <p class="lede reveal" data-delay="2">I am {SITE}, an interior designer and landscape design graduate. I turn briefs into buildable drawings, custom furniture and rooms that feel considered from the first sketch to the final finish.</p>
       <div class="hero-actions reveal" data-delay="3">
         <a class="btn btn-dark" href="#work">View selected work {ICON_DOWN}</a>
         <a class="btn btn-ghost" href="#contact">Start a project {ICON_ARROW}</a>
       </div>
       <div class="hero-meta reveal" data-delay="3">
-        <div><strong>05</strong>3D rooms</div>
+        <div><strong>05</strong>Room studies</div>
         <div><strong>05</strong>Orbitable models</div>
         <div><strong>KLA</strong>Kampala, Uganda</div>
       </div>
@@ -301,27 +301,49 @@ def index():
 <section class="section about" id="studio">
   <div class="wrap about-grid">
     <div class="about-figure reveal">
-      <img src="assets/img/reading-nook-1280.webp"
-           srcset="assets/img/reading-nook-800.webp 800w, assets/img/reading-nook-1280.webp 1280w"
-           sizes="(max-width:1000px) 80vw, 38vw" width="1280" height="720"
-           alt="Reading nook with linen armchair, bookshelf and warm lamp light" loading="lazy" decoding="async">
-      <span class="tag">Kampala · Uganda</span>
+      <img src="assets/img/brenda-01-810.webp"
+           srcset="assets/img/brenda-01-540.webp 540w, assets/img/brenda-01-810.webp 810w"
+           sizes="(max-width:1000px) 80vw, 38vw" width="810" height="1080"
+           alt="Nerima Brenda, interior and landscape designer" loading="lazy" decoding="async">
+      <span class="tag">Nerima · Kampala</span>
     </div>
     <div class="about-copy">
-      <span class="eyebrow reveal">The studio</span>
-      <h2 class="reveal" data-delay="1">Considered rooms, made to be lived in.</h2>
-      <p class="reveal" data-delay="2">I am {SITE}, an interior designer and spatial storyteller working between Kampala and the wider East African region. My work begins with how a room is used — where the light lands, where people pause, what the space should feel like at seven in the morning and again at nine at night.</p>
-      <p class="reveal" data-delay="2">Every room is modelled at full scale and tested against researched dimensions — 450 mm seat heights, 750 mm dining tables, 900 mm worktops, 600 mm bed clearances and a compact kitchen work triangle. From there, the palette stays disciplined: timber, stone, linen, clay and a little brass.</p>
-      <blockquote class="big-quote reveal" data-delay="3">“Good interiors do not ask for attention. They give it back.”</blockquote>
+      <span class="eyebrow reveal">About Nerima</span>
+      <h2 class="reveal" data-delay="1">Design that starts at the drawing board.</h2>
+      <p class="reveal" data-delay="2">I graduated from Kyambogo University with a Bachelor of Interior and Landscape Design, then completed two internships at Meek Construction Company Limited. There I worked directly with clients on furniture and interiors, from TV wall units and kitchen cabinets to floor plans, site plans and 3D designs.</p>
+      <p class="reveal" data-delay="2">I like customising. That means starting with a blank sheet, developing a concept from scratch and making pieces that are not already on the market. I keep an eye on current trends, but the final decision always belongs to the person who will live with the space.</p>
+      <blockquote class="big-quote reveal" data-delay="3">“A good design is one you can build, afford and still love a year later.”</blockquote>
       <div class="services reveal" data-delay="3">
-        <div><span>Interior design</span><span>Concept to install</span></div>
-        <div><span>Spatial planning</span><span>Layout &amp; flow</span></div>
-        <div><span>Anthropometrics</span><span>Dimensions &amp; clearances</span></div>
-        <div><span>Material palettes</span><span>Sourcing</span></div>
-        <div><span>3D visualisation</span><span>Models &amp; renders</span></div>
-        <div><span>Styling</span><span>Furniture &amp; objects</span></div>
+        <div><span>Residential interiors</span><span>Whole-home concepts</span></div>
+        <div><span>Custom furniture</span><span>Concept to drawing</span></div>
+        <div><span>Space planning</span><span>Floor and site plans</span></div>
+        <div><span>3D design</span><span>Visual studies</span></div>
+        <div><span>Colour and styling</span><span>Finishes and objects</span></div>
+        <div><span>Landscaping</span><span>Compounds and planting</span></div>
       </div>
-      <p class="reveal" data-delay="3" style="margin-top:26px"><a class="link-arrow" href="mailto:{EMAIL}">Work with me {ICON_ARROW}</a></p>
+      <p class="reveal" data-delay="3" style="margin-top:26px"><a class="link-arrow" href="assets/nerima-brenda-cv.pdf" target="_blank" rel="noopener">Download CV {ICON_ARROW}</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section practice" id="practice">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow reveal">In practice</span>
+        <h2 class="reveal" data-delay="1">From brief to finished space</h2>
+      </div>
+      <p class="reveal" data-delay="2">A look at the work behind the drawings: client projects, material choices and the small details that make a room feel complete.</p>
+    </div>
+    <div class="practice-grid">
+      <figure class="reveal">
+        <img src="assets/img/brenda-02-960.webp" srcset="assets/img/brenda-02-640.webp 640w, assets/img/brenda-02-960.webp 960w" sizes="(max-width:1000px) 90vw, 50vw" width="960" height="1280" alt="Interior and furniture work by Nerima Brenda" loading="lazy" decoding="async">
+        <figcaption>Furniture and interior detailing, from concept to drawing</figcaption>
+      </figure>
+      <figure class="reveal" data-delay="1">
+        <img src="assets/img/brenda-03-498.webp" srcset="assets/img/brenda-03-360.webp 360w, assets/img/brenda-03-498.webp 498w" sizes="(max-width:1000px) 90vw, 40vw" width="498" height="1080" alt="A project from Nerima Brenda's design practice" loading="lazy" decoding="async">
+        <figcaption>Residential planning, colour and styling</figcaption>
+      </figure>
     </div>
   </div>
 </section>
@@ -331,15 +353,15 @@ def index():
     <div class="section-head">
       <div>
         <span class="eyebrow reveal">How it works</span>
-        <h2 class="reveal" data-delay="1">Four unhurried steps</h2>
+        <h2 class="reveal" data-delay="1">Four clear steps</h2>
       </div>
-      <p class="reveal" data-delay="2">A simple, transparent process from first conversation to the final cushion.</p>
+      <p class="reveal" data-delay="2">A simple, transparent process from first conversation to drawings you can build from.</p>
     </div>
     <div class="process-grid">
-      <article class="step reveal"><span class="num">01</span><h3>Listen</h3><p>We walk the space, talk about routines, light and the things you want to keep. No mood boards yet.</p></article>
-      <article class="step reveal" data-delay="1"><span class="num">02</span><h3>Sketch</h3><p>Layouts, material directions and a first visual study — enough to test the feeling before committing.</p></article>
-      <article class="step reveal" data-delay="2"><span class="num">03</span><h3>Refine</h3><p>Samples, joinery details, lighting and a costed schedule. We edit until only the necessary remains.</p></article>
-      <article class="step reveal" data-delay="3"><span class="num">04</span><h3>Deliver</h3><p>Procurement, installation and styling, with the room finished down to the last object.</p></article>
+      <article class="step reveal"><span class="num">01</span><h3>Brief</h3><p>We talk about how the space is used, what you want to keep and what needs to change.</p></article>
+      <article class="step reveal" data-delay="1"><span class="num">02</span><h3>Draw</h3><p>Floor plans, site plans and 3D views give you something concrete to respond to.</p></article>
+      <article class="step reveal" data-delay="2"><span class="num">03</span><h3>Customise</h3><p>Furniture, joinery, colour and finishes are developed from the drawing board.</p></article>
+      <article class="step reveal" data-delay="3"><span class="num">04</span><h3>Hand over</h3><p>You receive clear drawings and a palette you can take to a builder or installer.</p></article>
     </div>
   </div>
 </section>
@@ -348,13 +370,14 @@ def index():
   <div class="wrap contact-grid">
     <div>
       <span class="eyebrow reveal">Contact</span>
-      <h2 class="reveal" data-delay="1">Let’s make a room that feels like <em>you.</em></h2>
-      <p class="reveal" data-delay="2">Available for residential interiors, styling and visual studies. Share a few lines about your space and timeline.</p>
+      <h2 class="reveal" data-delay="1">Let’s design a space that feels like <em>yours.</em></h2>
+      <p class="reveal" data-delay="2">Available for residential interiors, custom furniture, floor plans and landscaping. Share a few lines about your space and timeline.</p>
       <a class="mail reveal" data-delay="3" href="mailto:{EMAIL}">{EMAIL}</a>
     </div>
     <div class="contact-side reveal" data-delay="3">
-      <div><span class="label">Based in</span>Kampala, Uganda — working across East Africa</div>
-      <div><span class="label">Elsewhere</span><div class="socials"><a href="https://x.com/{X_HANDLE}" target="_blank" rel="noopener">X / Twitter</a><a href="https://github.com/MarkNwilliam" target="_blank" rel="noopener">GitHub</a></div></div>
+      <div><span class="label">Based in</span>Kampala, Uganda, working across East Africa</div>
+      <div><span class="label">Phone</span><a href="tel:+256758596679">{PHONE}</a></div>
+      <div><span class="label">CV</span><a href="assets/nerima-brenda-cv.pdf" target="_blank" rel="noopener">Download PDF</a></div>
       <div><span class="label">Response</span>Within two working days</div>
     </div>
   </div>
@@ -379,7 +402,7 @@ def viewer_section(p):
       <div class="viewer-stage" tabindex="0" role="application" aria-label="Interactive 3D model of {escape(p['plain'])}. Drag to orbit, scroll to zoom, or use the arrow keys. Press 0 to reset.">
         <img class="viewer-poster" src="../assets/img/{p['img']}-1280.webp" width="1280" height="720" alt="{escape(p['alt'])}" loading="lazy" decoding="async">
         <div class="viewer-loader" role="status" data-viewer-loader><span>Loading 3D model</span><span class="viewer-bar"><i></i></span></div>
-        <div class="viewer-error" role="alert" data-viewer-error hidden><span>3D preview unavailable — the render above still shows the room.</span></div>
+        <div class="viewer-error" role="alert" data-viewer-error hidden><span>3D preview unavailable, the render above still shows the room.</span></div>
       </div>
       <div class="viewer-toolbar">
         <span class="viewer-hint">Drag to orbit · Scroll to zoom</span>
@@ -402,7 +425,7 @@ def project_page(p, nxt, prev, index):
     viewer = viewer_section(p) if p.get("glb") else ""
     chip = '<a class="project-chip" href="#3d">Explore in 3D</a>' if p.get("glb") else ""
     html = head(
-        f"{p['plain']} — {SITE}",
+        f"{p['plain']}, {SITE}",
         p["intro"],
         f"{p['img']}-og.webp",
         rel="../",

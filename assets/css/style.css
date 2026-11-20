@@ -193,6 +193,13 @@ body.menu-open .menu-toggle span::after{transform:translateY(-5px) rotate(-45deg
 .services div{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}
 .services span:last-child{color:var(--ink-soft);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
 
+/* ---------- Practice photos ---------- */
+.practice{background:var(--paper)}
+.practice-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(18px,3vw,36px);align-items:end}
+.practice-grid figure{margin:0}
+.practice-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);background:var(--paper-2)}
+.practice-grid figcaption{margin-top:12px;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+
 /* ---------- Process ---------- */
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.5vw,34px)}
 .step{border-top:1px solid var(--ink);padding-top:18px}
@@ -290,6 +297,7 @@ body.menu-open .menu-toggle span::after{transform:translateY(-5px) rotate(-45deg
   .hero-note{left:auto;right:14px;bottom:14px}
   .about-grid{grid-template-columns:1fr;gap:40px}
   .about-figure{max-width:480px}
+  .practice-grid{grid-template-columns:1fr;gap:28px}
   .process-grid{grid-template-columns:1fr 1fr}
   .contact-grid{grid-template-columns:1fr}
   .project-meta{grid-template-columns:1fr 1fr}
